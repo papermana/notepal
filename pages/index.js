@@ -8,7 +8,7 @@ import initStore from '../redux/initStore';
 import App from '../components/App';
 
 class Root extends React.PureComponent {
-  static getInitialProps({req}) {
+  static async getInitialProps({req}) {
     const isServer = Boolean(req);
     const store = initStore(reducer, undefined, isServer);
 
