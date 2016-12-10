@@ -13,7 +13,8 @@ class Toolbar extends React.PureComponent {
 
   render = () => (
     <div className={styles}>
-      <Button disabled={this.isRenderingDisabled()} >
+      <Button disabled={this.isRenderingDisabled()}
+        linkTo="/preview" >
         Preview
       </Button>
       <Button>
