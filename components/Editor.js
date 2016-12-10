@@ -1,10 +1,14 @@
 import React from 'react';
 import remark from 'remark';
 import remarkHtml from 'remark-html';
+import { connect } from 'react-redux'
 import defaultWrapperStyles, {
   documentEditedWrapperStyles,
 } from '../styles/editorWrapperStyles';
 import editorStyles from '../styles/editorStyles';
+import {
+  editNote,
+} from '../redux/store';
 
 class Editor extends React.PureComponent {
   constructor() {
@@ -16,13 +20,14 @@ class Editor extends React.PureComponent {
   }
 
   onTextChange = (e) => {
-    remark()
-    .use(remarkHtml)
-    .process(e.target.value, (err, file) => {
-      this.setState({
-        text: String(file),
-      });
-    });
+    this.props.editNote(e.target.value);
+    // remark()
+    // .use(remarkHtml)
+    // .process(e.target.value, (err, file) => {
+    //   this.setState({
+    //     text: String(file),
+    //   });
+    // });
   };
 
   getWrapperStyles = () => {
@@ -39,8 +44,22 @@ class Editor extends React.PureComponent {
       <textarea className={editorStyles}
         autoFocus
         onChange={this.onTextChange} />
+      <div>
+        {this.props.noteText}
+      </div>
     </div>
   );
 }
 
-export default Editor;
+const mapStateToProps = (state) => ({
+  noteText: state ? state.get('noteText') : '',
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  editNote: (text) => dispatch(editNote(text)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Editor);
