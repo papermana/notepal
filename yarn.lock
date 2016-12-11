@@ -1033,7 +1033,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-comma-separated-tokens@^1.0.1:
+comma-separated-tokens@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.2.tgz#4b64717a2ee363af6dd39878336bd95e42d063e7"
   dependencies:
@@ -1167,6 +1167,13 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
+define-properties@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
+  dependencies:
+    foreach "^2.0.5"
+    object-keys "^1.0.8"
+
 del@2.2.2, del@^2.0.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/del/-/del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8"
@@ -1195,11 +1202,11 @@ destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
-detab@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/detab/-/detab-2.0.0.tgz#485bd7954d2348092e998f7ff1a79fd9869d9b50"
+detab@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/detab/-/detab-1.0.2.tgz#01bc2a4abe7bc7cc67c3039808edbae47049a0ee"
   dependencies:
-    repeat-string "^1.5.4"
+    repeat-string "^1.5.2"
 
 detect-indent@^4.0.0:
   version "4.0.0"
@@ -1602,6 +1609,10 @@ for-own@^0.1.4:
   dependencies:
     for-in "^0.1.5"
 
+foreach@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
+
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
@@ -1808,9 +1819,16 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.0.2"
 
-hast-util-is-element@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/hast-util-is-element/-/hast-util-is-element-1.0.0.tgz#3f7216978b2ae14d98749878782675f33be3ce00"
+hast-to-hyperscript@^2.0.1:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/hast-to-hyperscript/-/hast-to-hyperscript-2.0.4.tgz#487c099497b14bf87fc2a188aa3fbf0ee6235d8c"
+  dependencies:
+    comma-separated-tokens "^1.0.0"
+    is-nan "^1.2.1"
+    kebab-case "^1.0.0"
+    property-information "^3.0.0"
+    space-separated-tokens "^1.0.0"
+    unist-util-is "^2.0.0"
 
 hast-util-sanitize@^1.0.0:
   version "1.1.0"
@@ -1818,27 +1836,6 @@ hast-util-sanitize@^1.0.0:
   dependencies:
     has "^1.0.1"
     xtend "^4.0.1"
-
-hast-util-to-html@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-3.0.0.tgz#19a257cd7af464777c1cccf4d2d53d33147466c1"
-  dependencies:
-    ccount "^1.0.0"
-    comma-separated-tokens "^1.0.1"
-    has "^1.0.1"
-    hast-util-is-element "^1.0.0"
-    hast-util-whitespace "^1.0.0"
-    html-void-elements "^1.0.0"
-    kebab-case "^1.0.0"
-    property-information "^3.1.0"
-    space-separated-tokens "^1.0.0"
-    stringify-entities "^1.0.1"
-    unist-util-is "^2.0.0"
-    xtend "^4.0.1"
-
-hast-util-whitespace@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-1.0.0.tgz#bd096919625d2936e1ff17bc4df7fd727f17ece9"
 
 hawk@~3.1.3:
   version "3.1.3"
@@ -1877,10 +1874,6 @@ html-encoding-sniffer@^1.0.1:
 html-entities@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.0.tgz#41948caf85ce82fed36e4e6a0ed371a6664379e2"
-
-html-void-elements@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.1.tgz#f929bea267a19e3535950502ca12c159f1b559af"
 
 htmlescape@1.1.1:
   version "1.1.1"
@@ -2100,6 +2093,12 @@ is-my-json-valid@^2.10.0, is-my-json-valid@^2.12.4:
     generate-object-property "^1.1.0"
     jsonpointer "^4.0.0"
     xtend "^4.0.0"
+
+is-nan@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/is-nan/-/is-nan-1.2.1.tgz#9faf65b6fb6db24b7f5c0628475ea71f988401e2"
+  dependencies:
+    define-properties "^1.1.1"
 
 is-number@^2.0.2, is-number@^2.1.0:
   version "2.1.0"
@@ -2770,20 +2769,18 @@ mdast-util-definitions@^1.1.1:
   dependencies:
     unist-util-visit "^1.0.0"
 
-mdast-util-to-hast@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-2.1.1.tgz#f38c8e0594cd042f960dc5da84c83b6e802a2763"
+mdast-util-to-hast@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-1.0.0.tgz#230b57b2908cb2ea61ad537c58143565c763a512"
   dependencies:
     collapse-white-space "^1.0.0"
-    detab "^2.0.0"
-    has "^1.0.1"
+    detab "^1.0.2"
     mdast-util-definitions "^1.1.1"
     normalize-uri "^1.0.0"
     trim "0.0.1"
     trim-lines "^1.0.0"
     unist-builder "^1.0.1"
-    unist-util-generated "^1.1.0"
-    unist-util-position "^3.0.0"
+    unist-util-position "^2.0.1"
     unist-util-visit "^1.1.0"
     xtend "^4.0.1"
 
@@ -3085,6 +3082,10 @@ object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
+object-keys@^1.0.8:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
+
 object.omit@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
@@ -3314,7 +3315,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-property-information@^3.1.0:
+property-information@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-3.1.0.tgz#1581bf8a445dfbfef759775a86700e8dda18b4a1"
 
@@ -3568,15 +3569,6 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-remark-html@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-5.1.0.tgz#c48ac755e3823d56df2e4d622a12f1d096522fa9"
-  dependencies:
-    hast-util-sanitize "^1.0.0"
-    hast-util-to-html "^3.0.0"
-    mdast-util-to-hast "^2.1.1"
-    xtend "^4.0.1"
-
 remark-parse@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-2.2.0.tgz#92a8e7750d4fbfd53cd460adad686014f2a7f43b"
@@ -3597,6 +3589,14 @@ remark-parse@^2.2.0:
     unist-util-remove-position "^1.0.0"
     vfile-location "^2.0.0"
     xtend "^4.0.1"
+
+remark-react@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/remark-react/-/remark-react-3.1.0.tgz#1e16aebcaf115dd455969df02aa634efea265018"
+  dependencies:
+    hast-to-hyperscript "^2.0.1"
+    hast-util-sanitize "^1.0.0"
+    mdast-util-to-hast "^1.0.0"
 
 remark-stringify@^2.2.0:
   version "2.3.0"
@@ -4172,10 +4172,6 @@ unist-builder@^1.0.1:
   dependencies:
     object-assign "^4.1.0"
 
-unist-util-generated@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.0.tgz#8c95657ff12b32eaffe0731fbb37da6995fae01b"
-
 unist-util-is@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-2.0.0.tgz#e536472c4f78739e164d0859fc3201b97cf46e7c"
@@ -4186,9 +4182,9 @@ unist-util-modify-children@^1.0.0:
   dependencies:
     array-iterate "^1.0.0"
 
-unist-util-position@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.0.0.tgz#e6e1e03eeeb81c5e1afe553e8d4adfbd7c0d8f82"
+unist-util-position@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-2.0.1.tgz#1a639df0a0940460a2d8b205e9be704fe07518ec"
 
 unist-util-remove-position@^1.0.0:
   version "1.1.0"
