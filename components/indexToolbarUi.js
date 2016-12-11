@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './Button';
-import styles from '../styles/toolbarStyles';
+import Toolbar from './Toolbar';
 
-class Toolbar extends React.PureComponent {
+class IndexToolbar extends React.PureComponent {
   static propTypes = {
     noteText: React.PropTypes.string.isRequired,
   };
@@ -12,7 +12,7 @@ class Toolbar extends React.PureComponent {
   );
 
   render = () => (
-    <div className={styles}>
+    <Toolbar>
       <Button disabled={this.isRenderingDisabled()}
         linkTo="/preview" >
         Preview
@@ -20,8 +20,8 @@ class Toolbar extends React.PureComponent {
       <Button>
         ?
       </Button>
-    </div>
+    </Toolbar>
   );
 }
 
-export default Toolbar;
+export default IndexToolbar;

@@ -1,12 +1,10 @@
-import {
-  connect,
-} from 'react-redux';
-import Toolbar from './ToolbarUi';
+import React from 'react';
+import styles from '../styles/toolbarStyles';
 
-const mapStateToProps = (state) => ({
-  noteText: state ? state.get('noteText') : '',
-});
+const Toolbar = (props) => (
+  <div className={styles}>
+    {props.children}
+  </div>
+);
 
-export default connect(
-  mapStateToProps,
-)(Toolbar);
+export default Toolbar;
