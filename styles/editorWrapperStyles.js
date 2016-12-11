@@ -6,6 +6,9 @@ import css, {
 const wrapperStyles = {
   flex: 1,
   position: 'relative',
+  width: 650,
+  maxWidth: '100%',
+  margin: 'auto',
   padding: 20,
   boxSizing: 'border-box',
 };
@@ -25,7 +28,7 @@ const beforeStyles = {
   transition: 'opacity 0.33s',
 };
 const documentEditedBeforeStyles = Object.assign({}, beforeStyles, {
-  opacity: 0.06,
+  opacity: 0.02,
 });
 const afterStyles = {
   content: '"Type something to start"',

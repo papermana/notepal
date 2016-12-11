@@ -1,6 +1,7 @@
 import React from 'react';
 import remark from 'remark';
 import remarkHtml from 'remark-html';
+import styles from '../styles/previewStyles';
 
 class Preview extends React.PureComponent {
   static propTypes = {
@@ -34,7 +35,8 @@ class Preview extends React.PureComponent {
   };
 
   render = () => (
-    <div dangerouslySetInnerHTML={{__html: this.state.formattedText}} />
+    <div className={styles}
+      dangerouslySetInnerHTML={{__html: this.state.formattedText}} />
   );
 }
 
