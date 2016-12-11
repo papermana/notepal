@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Toolbar from './Toolbar';
 
-const PreviewToolbar = () => (
+const HelpToolbar = () => (
   <Toolbar>
     <Button linkTo="/" >
       ← Go back
@@ -10,4 +10,4 @@ const PreviewToolbar = () => (
   </Toolbar>
 );
 
-export default PreviewToolbar;
+export default HelpToolbar;

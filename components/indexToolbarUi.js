@@ -17,7 +17,7 @@ class IndexToolbar extends React.PureComponent {
         linkTo="/preview" >
         Preview
       </Button>
-      <Button>
+      <Button linkTo="/help" >
         ?
       </Button>
     </Toolbar>
