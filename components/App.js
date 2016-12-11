@@ -2,21 +2,18 @@ import React from 'react';
 import css from 'next/css';
 import Head from 'next/head';
 import * as styleConsts from '../styles/constants';
-import Toolbar from '../components/Toolbar';
-import Editor from '../components/Editor';
 
 css.global('body', {
   margin: 0,
   backgroundColor: styleConsts.appBackgroundColor,
 });
 
-const App = () => (
+const App = (props) => (
   <div className={appStyles}>
     <Head>
       <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&amp;subset=latin-ext" rel="stylesheet" />
     </Head>
-    <Toolbar />
-    <Editor />
+    {props.children}
   </div>
 );
 
