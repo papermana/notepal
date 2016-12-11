@@ -14,7 +14,7 @@ class Editor extends React.PureComponent {
   onTextChange = (e) => this.props.editNote(e.target.value);
 
   getWrapperStyles = () => {
-    if (this.props.noteText === '' || this.props.noteText === '\n') {
+    if (this.props.noteText === '') {
       return defaultWrapperStyles;
     }
     else {
@@ -26,10 +26,8 @@ class Editor extends React.PureComponent {
     <div className={this.getWrapperStyles()} >
       <textarea className={editorStyles}
         autoFocus
+        value={this.props.noteText}
         onChange={this.onTextChange} />
-      <div>
-        {this.props.noteText}
-      </div>
     </div>
   );
 }
